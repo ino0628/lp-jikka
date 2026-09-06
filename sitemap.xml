@@ -2,4 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://jikka.kurashi-annai.com/</loc><lastmod>2026-09-07</lastmod><priority>1.0</priority></url>
   <url><loc>https://jikka.kurashi-annai.com/privacy.html</loc><lastmod>2026-09-07</lastmod><priority>0.3</priority></url>
+  <url><loc>https://jikka.kurashi-annai.com/guide/souzoku-touki-gimuka/</loc><lastmod>2026-09-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jikka.kurashi-annai.com/guide/</loc><lastmod>2026-09-07</lastmod><priority>0.7</priority></url>
 </urlset>
