@@ -37,10 +37,9 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .checks li::before{content:"✓";position:absolute;left:12px;top:9px;color:var(--accent);font-weight:700}
 .risk{padding-left:20px;margin:0 0 8px}
 .risk li{margin:6px 0}
-.relief{background:linear-gradient(180deg,var(--soft) 0%,#fff 100%);border:1px solid var(--line);border-radius:16px;padding:26px 20px 22px;margin:0 0 36px}
+.relief{position:relative;background:linear-gradient(180deg,var(--soft) 0%,#fff 100%);border:1px solid var(--line);border-radius:16px;padding:34px 20px 22px;margin:40px 0 36px}
 .relief .relief-lead{font-size:16px;margin:0 0 16px}
-.bridge{text-align:center;color:var(--sub);font-size:15px;margin:34px 0 14px;position:relative}
-.bridge::before{content:"";display:block;width:2px;height:26px;background:#e24b3b;opacity:.5;margin:0 auto 10px;border-radius:2px}
+.bridge{position:absolute;top:-17px;left:50%;transform:translateX(-50%);margin:0;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:14px;color:var(--ink);white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.06);max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis}
 .points{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:10px}
 .points li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 46px;position:relative}
 .points li::before{content:"✓";position:absolute;left:14px;top:12px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
@@ -64,7 +63,7 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .risk-card .big{display:block;font-size:20px;font-weight:800;color:#b42318;line-height:1.25;margin:0 0 4px}
 .risk-card b{display:block;font-size:15px;margin:0 0 2px}
 .risk-card span{display:block;font-size:14px;color:var(--sub);line-height:1.6}
-@media (min-width:600px){.risk-card{display:grid;grid-template-columns:9em 1fr;gap:2px 14px;align-items:center}.risk-card .big{grid-row:span 2;font-size:22px;margin:0}}
+@media (min-width:600px){.risk-cards{grid-template-columns:1fr 1fr;gap:12px}.risk-card{padding:16px 18px}.risk-card .big{font-size:26px;margin:0 0 6px}.risk-card:last-child:nth-child(odd){grid-column:1 / -1}}
 .risk-close{margin:10px 0 0;font-size:14px;color:#7a271a;font-weight:700}
 .dialogs{display:grid;gap:14px;margin:10px 0 6px}
 .dialog{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
@@ -173,8 +172,8 @@ body.has-sticky{padding-bottom:72px}
 <p class="risk-close">急がせるつもりはありません。ただ、放置の代償は年ごとに大きくなります。順番だけは、先に決めておいてください。</p>
 </section>
 
-<p class="bridge">ここまで読んで、胸が重くなった方へ。</p>
 <section class="relief">
+<p class="bridge">ここまで読んで、胸が重くなった方へ。</p>
 <h2>大丈夫です。そうなる前に、手は打てます。</h2>
 <p class="relief-lead">片付けなくて、大丈夫。登記がまだでも、兄弟と話がついていなくても、遠くに住んでいても。今の状態のまま、相談は始められます。「何から手をつければいいか分からない」のところから、一緒に順番を決めます。</p>
 
@@ -183,7 +182,7 @@ body.has-sticky{padding-bottom:72px}
 </section>
 
 <section class="trust"><h2>私たちは、業者ではありません。だから、あなたの側に立てます。</h2><p class="lead">くらしの案内所は、売る会社でも、片付ける会社でもありません。あなたの話を先に聞いて、順番を一緒に決め、実家のある地域の会社に橋渡しをする窓口です。会社を紹介して終わりではなく、ちゃんと連絡が来たか、見積が説明どおりか、断ったあとに連絡が止まったかまで確認します。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する会社と、営業電話を繰り返さない取り決めをしています。信頼できる実績のある会社しか紹介しません。</span></li><li><b>見積は必ず明細で</b><span>「一式」だけの見積は受け取りません。何にいくらかかるかが分かる形でお渡しします。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>見積は、最大3社から</b><span>どの会社から連絡が来るかは、事前にお伝えします。それ以外の会社から連絡が行くことはありません。</span></li><li><b>終わるまで、窓口は同じです</b><span>売却・片付け・解体のどれで進めても、途中で担当が変わりません。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する会社の基準</h3><ul class="criteria"><li>実家のある市区町村（または近隣）に拠点があり、現地をすぐ見に行ける</li><li>必要な許認可を持っている（不動産の売買は宅地建物取引業の免許、片付けは家庭ごみの処理を適法に行える体制）</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>実家は、片付ける「物件」ではなく、区切りをつける場所だと思っています。だから最初に伺うのは金額ではなく、いま何に困っているかです。</p><p>片付けが終わっていなくても、兄弟と話がついていなくても、登記がまだでも、相談は始められます。順番を一緒に決めて、地元の会社につなぎ、終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
-<section><h2>ご相談の例</h2><p>こんなふうに進みます。</p><div class="dialogs"><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 22c0-9 5-15 12-15s12 6 12 15v7H12z" fill="#8a96a3"/><circle cx="24" cy="18" r="8" fill="#b8c2cc"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">60代・女性・県外在住</div></div><p class="ask">父が亡くなって3年、実家は家財がそのままです。片付けてからでないと相談できないと思っていました。</p><div class="reply"><small>事務局の返答</small>片付けは後で大丈夫です。まず「売れるか・いくらか」を先に見ましょう。家財ごと引き取れる会社があります。</div><p class="then"><b>その後：</b>実家のある市の会社2社に橋渡し。家財そのままで査定し、片付け費用ゼロの買取案と、片付けてから仲介で売る案を並べて比較。</p></div><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">50代・男性・関東在住</div></div><p class="ask">兄弟と話が進みません。売るにしても、いくらになるか分からないと話ができない。</p><div class="reply"><small>事務局の返答</small>先に費用の幅と手順を数字にして、話し合いの材料にしましょう。査定は、相続人全員の合意がなくても取れます。</div><p class="then"><b>その後：</b>査定額と3つの出口（買取・仲介・解体）の手取りを1枚にまとめて共有。合意のあと、仲介で売却へ。</p></div><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">60代・男性・実家の近くに在住</div></div><p class="ask">建物が傷んでいて、解体しないと売れないと言われました。解体費を払ってまで売る価値があるのか、判断がつきません。</p><div class="reply"><small>事務局の返答</small>「解体してから売る」は最後の手段です。現状のまま買い取る会社の額と、解体後の土地の手取りを並べてから決めましょう。</div><p class="then"><b>その後：</b>現状買取と更地売却の2案を比較。解体は買主側で行う条件で、現状のまま買取に。</p></div></div><p class="note">※進み方のイメージとして作った例です。実際のご相談が集まり次第、ご本人の許可を得た声に差し替えます。</p></section><div class="cta-inline"><a class="cta" href="#form">無料で査定と見積を手配する</a></div>
+<section><h2>ご相談の例</h2><p>こんなふうに進みます。</p><div class="dialogs"><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 22c0-9 5-15 12-15s12 6 12 15v7H12z" fill="#8a96a3"/><circle cx="24" cy="18" r="8" fill="#b8c2cc"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">60代・女性・県外在住</div></div><p class="ask">父が亡くなって3年、実家は家財がそのままです。片付けてからでないと相談できないと思っていました。</p><div class="reply"><small>事務局の返答</small>片付けは後で大丈夫です。まず「売れるか・いくらか」を先に見ましょう。家財ごと引き取れる会社があります。</div><p class="then"><b>その後：</b>実家のある市の会社2社に橋渡し。家財そのままで査定し、片付け費用ゼロの買取案と、片付けてから仲介で売る案を並べて比較。</p></div><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">50代・男性・関東在住</div></div><p class="ask">兄弟と話が進みません。売るにしても、いくらになるか分からないと話ができない。</p><div class="reply"><small>事務局の返答</small>先に費用の幅と手順を数字にして、話し合いの材料にしましょう。査定は、相続人全員の合意がなくても取れます。</div><p class="then"><b>その後：</b>査定額と3つの出口（買取・仲介・解体）の手取りを1枚にまとめて共有。合意のあと、仲介で売却へ。</p></div><div class="dialog"><div class="head"><div class="av"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="9" fill="#9aa5b1"/><path d="M6 48c0-11 8-17 18-17s18 6 18 17z" fill="#9aa5b1"/></svg></div><div class="who">60代・男性・実家の近くに在住</div></div><p class="ask">建物が傷んでいて、解体しないと売れないと言われました。解体費を払ってまで売る価値があるのか、判断がつきません。</p><div class="reply"><small>事務局の返答</small>「解体してから売る」は最後の手段です。現状のまま買い取る会社の額と、解体後の土地の手取りを並べてから決めましょう。</div><p class="then"><b>その後：</b>現状買取と更地売却の2案を比較。解体は買主側で行う条件で、現状のまま買取に。</p></div></div><p class="note">※ご相談の例です。個人が特定される内容は含みません。</p></section><div class="cta-inline"><a class="cta" href="#form">無料で査定と見積を手配する</a></div>
 
 
 <section>
