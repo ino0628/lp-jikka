@@ -44,6 +44,23 @@ h2{font-size:19px;margin:0 0 12px;padding-left:10px;border-left:4px solid var(--
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
 .card b{display:block;margin-bottom:4px}
 .range{font-size:22px;font-weight:700}
+.trust{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;margin:6px 0}
+.trust h2{border:0;padding:0;font-size:21px;line-height:1.4}
+.trust .lead{margin:0 0 14px}
+.trust h3{font-size:15px;margin:18px 0 8px;color:var(--sub)}
+.promises{list-style:none;padding:0;margin:0;display:grid;gap:8px;counter-reset:pr}
+.promises li{background:var(--soft);border-radius:10px;padding:12px 12px 12px 44px;position:relative}
+.promises li::before{counter-increment:pr;content:counter(pr);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.promises b{display:block;margin-bottom:2px}
+.promises span{font-size:14px;color:var(--sub)}
+.criteria{margin:0;padding-left:20px;font-size:15px}
+.criteria li{margin:4px 0}
+.message{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin:12px 0 0;font-size:15px}
+.message p{margin:0 0 8px}
+.message .sign{color:var(--sub);font-size:13px;margin:0}
+.money-lead{background:var(--soft);border-radius:10px;padding:12px 14px;margin:0 0 12px}
+.money-lead p{margin:0 0 6px;font-weight:700}
+.money-lead ul{margin:0;padding-left:20px;font-size:15px}
 .voices{display:grid;gap:12px}
 .voice{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
 .voice .av{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#eef1f4;overflow:hidden}
@@ -131,6 +148,8 @@ body.has-sticky{padding-bottom:72px}
 
 </section>
 
+<section class="trust"><h2>私たちは、業者ではありません。だから、あなたの側に立てます。</h2><p class="lead">くらしの案内所は、売る会社でも、片付ける会社でもありません。あなたの話を先に聞いて、順番を一緒に決め、北九州の会社に橋渡しをする窓口です。会社を紹介して終わりではなく、ちゃんと連絡が来たか、見積が説明どおりか、断ったあとに連絡が止まったかまで確認します。</p><h3>5つのお約束</h3><ol class="promises"><li><b>しつこい営業はさせません</b><span>対応する会社と、営業電話を繰り返さない取り決めをしています。止まらないときは当社が止めます。</span></li><li><b>見積は必ず明細で</b><span>「一式」だけの見積は受け取りません。何にいくらかかるかが分かる形でお渡しします。</span></li><li><b>断っても、費用も理由もいりません</b><span>見積を見て合わなければ、そのまま断って構いません。当社への費用はかかりません。</span></li><li><b>情報を渡すのは、最大3社まで</b><span>会社名は事前にお伝えします。同意なく他へ渡すことはありません。</span></li><li><b>終わるまで、窓口は同じです</b><span>売却・片付け・解体のどれで進めても、途中で担当が変わりません。分からないことは、いつでも聞いてください。</span></li></ol><h3>ご紹介する会社の基準</h3><ul class="criteria"><li>北九州市内に拠点があり、現地をすぐ見に行ける</li><li>必要な許認可を持っている（不動産の売買は宅地建物取引業の免許、片付けは家庭ごみの処理を適法に行える体制）</li><li>明細のある見積を出す。追加費用は事前に説明する</li><li>「しつこい営業をしない」「断られたら連絡しない」の取り決めに同意している</li></ul><h3>事務局より</h3><div class="message"><p>実家は、片付ける「物件」ではなく、区切りをつける場所だと思っています。だから最初に伺うのは金額ではなく、いま何に困っているかです。</p><p>片付けが終わっていなくても、兄弟と話がついていなくても、登記がまだでも、相談は始められます。順番を一緒に決めて、地元の会社につなぎ、終わるまで同じ窓口でお付き合いします。</p><p class="sign">くらしの案内所事務局</p></div></section>
+
 <section>
 <h2>実家じまい案内所でできること</h2>
 <div class="cards"><div class="card"><b>家財が残ったままで査定できる</b><div class="note">片付けなくて大丈夫です。そのまま買い取る会社なら片付け費用がかからないこともあります。買取・仲介・解体の3通りで比べられます。</div></div><div class="card"><b>北九州の会社から、1〜2営業日で連絡</b><div class="note">現地を見られる北九州市内の会社をお渡しします。ご自身が県外にお住まいでも進められます。</div></div><div class="card"><b>順番と費用の幅を先に見せる</b><div class="note">片付けてから売る、解体してから相談する。順番を間違えると要らない費用を払います。先に順番と費用の幅をお見せします。紹介は無料、断っても費用はかかりません。</div></div></div>
@@ -138,6 +157,7 @@ body.has-sticky{padding-bottom:72px}
 
 <section>
 <h2>お金の話（3つの出口）</h2>
+<div class="money-lead"><p>先に費用を知っておくと、避けられる損があります</p><ul><li>片付けてから売ると、買取ならかからなかった片付け費用（数十万円）を先に払うことになります</li><li>解体してから売ると、住宅用地の特例が外れて、売れるまで固定資産税が最大6倍のまま続きます</li><li>傷みが進んでから動くと、片付けも解体も高くなります。売れる家のうちに動く方が手取りは残ります</li></ul></div>
 <table class="tbl"><tr><th>出口</th><th>スピード</th><th>手取り</th><th>片付け</th></tr><tr><td>買取（会社がそのまま買う）</td><td>最短数日〜数週間</td><td>仲介より下がる</td><td>不要なことが多い</td></tr><tr><td>仲介（買主を探す）</td><td>数か月〜</td><td>高くなりやすい</td><td>必要</td></tr><tr><td>解体して土地で売る</td><td>数か月〜</td><td>解体費を引いた額</td><td>解体に含む</td></tr></table><ul class="facts"><li>仲介の手数料は、売買価格の3%＋6万円（税別）が法律上の上限です</li><li>買取なら仲介の手数料はかかりません（価格は仲介より下がります）</li></ul><details><summary>片付けと解体の費用の目安（必要な場合だけ）</summary><div class="cards" style="margin-top:10px"><div class="card"><b>片付け（残置物の処分）</b><div class="range">8万〜150万円</div><div class="note">間取りと物の量で決まる。買取や解体とセットにすると安くなることが多い</div></div><div class="card"><b>解体（必要な場合のみ）</b><div class="range">100万〜200万円</div><div class="note">木造の一戸建ての目安。北九州市の除却補助（老朽空き家等除却促進事業・上限30万円・要件あり）は着工前の申請が条件</div></div></div></details>
 <p class="note">金額は北九州市周辺の一般的な目安です。実際の費用は現地の見積で確定します。</p>
 </section>
