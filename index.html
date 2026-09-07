@@ -189,9 +189,98 @@ footer a{color:var(--sub)}
 body.has-sticky{padding-bottom:72px}
 @media (min-width:600px){.cta-row{grid-template-columns:1fr 1fr}}
 
+/* ---- 視覚モード（visual:true） ---- */
+.v .wrap{max-width:880px}
+.v .hero{display:grid;gap:18px;padding:24px 0 16px}
+.v .hero-media{margin:0;border-radius:16px;overflow:hidden;background:var(--soft);aspect-ratio:16/10}
+.v .hero-media img{display:block;width:100%;height:100%;object-fit:cover}
+.v .hero h1{font-size:27px}
+@media (min-width:800px){.v .hero{grid-template-columns:1.15fr 1fr;align-items:center;padding:36px 0 26px}.v .hero-media{aspect-ratio:auto;height:100%;min-height:320px}.v .hero h1{font-size:34px}}
+.v .checks.two{grid-template-columns:1fr}
+@media (min-width:640px){.v .checks.two{grid-template-columns:1fr 1fr}}
+.v .checks li.ico{padding-left:52px}
+.v .checks li.ico::before{content:none}
+.v .checks li.ico .ic{position:absolute;left:12px;top:9px;width:28px;height:28px;color:var(--accent)}
+.ic{display:inline-block}
+.ic svg{width:100%;height:100%;display:block}
+.v .card{position:relative}
+.v .card>.ic{width:40px;height:40px;color:var(--accent);background:var(--soft);border-radius:10px;padding:8px;margin:0 0 10px}
+@media (min-width:640px){.v .cards.two{grid-template-columns:1fr 1fr}.v .cards.three{grid-template-columns:1fr 1fr 1fr}}
+.v .risk-card .ic{width:30px;height:30px;color:#b42318;margin:0 0 6px}
+figure.ph{margin:14px 0 0;border-radius:14px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+figure.ph img{display:block;width:100%;height:auto}
+figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background:#fff;border-top:1px solid var(--line)}
+.sub-h{font-size:16px;margin:18px 0 8px;color:var(--ink)}
+.stepper{list-style:none;padding:0;margin:0;counter-reset:st;display:grid;gap:0}
+.stepper li{position:relative;padding:0 0 22px 58px;min-height:52px}
+.stepper li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:1}
+.stepper li::after{content:"";position:absolute;left:20px;top:42px;bottom:0;width:2px;background:var(--line)}
+.stepper li:last-child::after{display:none}
+.stepper li>.ic{display:none}
+.stepper b{display:block;font-size:16px;margin:9px 0 2px}
+.stepper span{display:block;font-size:14px;color:var(--sub)}
+.stepper small{display:block;color:var(--sub);font-size:13px;margin-top:4px}
+@media (min-width:720px){.stepper{grid-template-columns:repeat(var(--n,3),1fr);gap:16px}.stepper li{padding:0 6px 0 0;text-align:center}.stepper li::before{position:static;margin:0 auto}.stepper li::after{left:calc(50% + 24px);right:calc(-50% + 24px);top:20px;bottom:auto;height:2px;width:auto}.stepper li>.ic{display:block;width:34px;height:34px;color:var(--accent);margin:10px auto 0}.stepper b{margin-top:6px}}
+.tl{display:grid;gap:8px;margin:10px 0 0;padding:0;list-style:none;counter-reset:tl}
+.tl li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.tl li>.ic{width:34px;height:34px;color:var(--accent);background:var(--soft);border-radius:8px;padding:6px}
+.tl b{display:block;font-size:15px}
+.tl b::before{counter-increment:tl;content:counter(tl) ". ";color:var(--accent)}
+.tl span{display:block;font-size:13px;color:var(--sub)}
+@media (min-width:720px){.tl{grid-template-columns:repeat(var(--n,5),1fr)}.tl li{grid-template-columns:1fr;text-align:center;justify-items:center;padding:12px 8px}}
+.bk{margin:12px 0 0}
+.bk ol{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:10px}
+.bk li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.bk-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0 0 6px}
+.bk-h b{font-size:15px}
+.bk-h span{font-size:12px;color:var(--sub)}
+.bk-r{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.bk-t{display:block;height:16px;background:#eef1f4;border-radius:999px;overflow:hidden}
+.bk-t i{display:block;height:100%;border-radius:999px}
+.bk-a{font-size:15px;white-space:nowrap;color:var(--ink)}
+@media (min-width:720px){.bk li{display:grid;grid-template-columns:16em 1fr;gap:10px;align-items:center}.bk-h{margin:0;display:block}.bk-h span{display:block}}
+.factors{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px;grid-template-columns:1fr 1fr}
+.factors li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 8px;font-size:13px;text-align:center;line-height:1.5}
+.factors li>.ic{display:block;width:30px;height:30px;color:var(--accent);margin:0 auto 4px}
+@media (min-width:640px){.factors{grid-template-columns:repeat(4,1fr)}}
+.badges li.ico{display:inline-flex;align-items:center;gap:6px}
+.badges li>.ic{width:16px;height:16px;color:var(--accent)}
+.v .points{gap:10px}
+@media (min-width:640px){.v .points.two{grid-template-columns:1fr 1fr}}
+/* FV の段階式フォーム */
+.fvf{background:#fff;border:2px solid var(--accent);border-radius:14px;padding:14px 14px 12px;margin:14px 0 8px;box-shadow:0 8px 24px rgba(11,95,255,.10)}
+.fvf-t{margin:0 0 8px;font-weight:700;font-size:15px}
+.fvf-grid{display:grid;gap:8px}
+.fvf label{margin:0;font-size:13px;font-weight:700}
+.fvf-step{display:inline-block;background:var(--accent);color:#fff;font-size:11px;border-radius:999px;padding:1px 8px;margin:0 6px 4px 0;vertical-align:middle}
+.fvf select{margin-top:2px;padding:11px 10px;font-size:16px}
+.fvf-btn{width:100%;display:block;margin:12px 0 0;font-size:17px;padding:15px 16px;border:0;cursor:pointer}
+.fvf-note{margin:8px 0 0;text-align:center}
+@media (min-width:800px){.v .hero.has-fvf{grid-template-columns:1fr 1fr}}
+/* 関係図 */
+figure.rel{margin:14px 0 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}
+figure.rel svg{display:block;width:100%;height:auto}
+/* 補助金の帯 */
+.hojo{margin:16px 0 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.hojo-in{background:#14305e;background-image:repeating-conic-gradient(from 0deg at 50% 120%,rgba(255,255,255,.06) 0deg 6deg,transparent 6deg 12deg);color:#fff;padding:18px 16px;text-align:center;display:grid;gap:4px}
+.hojo-l{font-size:14px;font-weight:700;opacity:.95}
+.hojo-big{font-size:38px;font-weight:900;color:#ffd83d;line-height:1.1;letter-spacing:.01em}
+.hojo-s{font-size:12px;opacity:.9}
+.hojo-b{margin:0;padding:12px 14px 4px;font-size:15px}
+.hojo .note{padding:0 14px 12px;margin:0}
+@media (min-width:640px){.hojo-big{font-size:46px}}
+/* 金額つき事例 */
+.ex{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px}
+.ex li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline}
+.ex b{font-size:20px;color:var(--accent);grid-row:1 / span 2;align-self:center;white-space:nowrap}
+.ex span{font-size:14px;font-weight:700}
+.ex em{font-style:normal;font-size:13px;color:var(--sub)}
+.ex small{grid-column:1 / -1;font-size:12px;color:var(--sub)}
+@media (min-width:640px){.ex{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
-<body data-page="lp" class="ui-shine ui-pulse">
+<body data-page="lp" class="ui-shine ui-pulse v">
 <script>
 (function(){
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arguments.callee); return; }
@@ -219,26 +308,26 @@ body.has-sticky{padding-bottom:72px}
 <header><div class="wrap"><div class="brand"><span class="name">実家じまい案内所</span><a class="cta small" href="#form">無料で見積</a></div></div></header>
 
 <div class="wrap">
-<div class="hero">
+<div class="hero has-fvf">
 <div class="hero-text">
 <h1>実家、どこから手をつけますか。</h1>
 <p>相続した実家を、売却・片付け・解体までまとめて手配します。家財が残ったままで大丈夫です。実家がどこにあっても、ご自身が遠くにお住まいでも。ご連絡は1〜2営業日で。</p>
-<ul class="badges"><li>紹介は無料</li><li>入力1分</li><li>全国対応</li></ul>
-<div class="cta-row"><a class="cta" href="#form">無料で査定と見積を手配する</a></div>
+<ul class="badges"><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>紹介は無料</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>入力1分</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>全国対応</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>家財が残ったままで</li></ul>
+<form class="fvf" id="fvform" novalidate><p class="fvf-t">まず、実家のことだけ教えてください（お名前などは次の画面で）</p><div class="fvf-grid"><label><span class="fvf-step">STEP1</span>建物の状態<select name="property_state"><option value="">選んでください</option><option>家財が残っている</option><option>ほぼ片付いている</option><option>老朽化が進んでいる</option><option>分からない</option></select></label><label><span class="fvf-step">STEP2</span>希望<select name="wish"><option value="">選んでください</option><option>売却したい</option><option>片付けだけ頼みたい</option><option>解体も含めて相談したい</option><option>まだ決めていない</option></select></label><label><span class="fvf-step">STEP3</span>実家のある都道府県<select name="pref"><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select></label></div><button type="submit" class="cta fvf-btn" data-cta="fv_form">無料で査定と見積を手配する（あと1分）</button><p class="note fvf-note">会社からの営業電話はありません。断るときは、事務局が代わりに伝えます。</p></form>
 <p class="note">紹介は無料です。しつこい営業はしないよう、対応事業者と取り決めています。</p>
 </div>
-
+<figure class="hero-media"><img src="img/hero_house.jpg" alt="地方にある実家（イメージ）" width="1344" height="768" srcset="img/hero_house-720.jpg 720w, img/hero_house.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" fetchpriority="high"></figure>
 </div>
 
 <section id="pain" data-sec="pain">
 <h2>こんなことで止まっていませんか</h2>
-<ul class="checks"><li>何から手をつければいいのか分からない</li><li>家財がそのままで、片付ける時間がない</li><li>遠方に住んでいて、何度も実家に行けない</li><li>固定資産税だけ払い続けている</li><li>兄弟と話が進まない</li><li>近所に迷惑をかけていないか気になる</li></ul>
-
+<ul class="checks two"><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>何から手をつければいいのか分からない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>家財がそのままで、片付ける時間がない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>遠方に住んでいて、何度も実家に行けない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19L19 5"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span>固定資産税だけ払い続けている</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 20c0-3 1.5-5 4-5 1.5 0 3 1 3 3v2"/></svg></span>兄弟と話が進まない</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg></span>近所に迷惑をかけていないか気になる</li></ul>
+<figure class="ph"><img src="img/room.jpg" alt="家財が残ったままの実家の部屋（イメージ）" width="1344" height="768" srcset="img/room-720.jpg 720w, img/room.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>家財が残ったままでも、査定は始められます（イメージ）</figcaption></figure>
 </section>
 
 <!--RISK--><section class="risk-box" id="risk" data-sec="risk">
 <h2>放っておくと、こうなります。</h2>
-<div class="risk-cards"><div class="risk-card"><div class="big">最大6倍</div><b>固定資産税が跳ね上がる</b><span>「管理不全空家」や「特定空家」として勧告を受けると、住宅用地の特例（課税標準が6分の1）が外れ、土地の固定資産税が最大で6倍になることがあります。※実際の税額は評価額と負担調整で決まります。</span></div><div class="risk-card"><div class="big">10万円以下の過料</div><b>登記を放置すると罰則</b><span>2024年4月から相続登記は義務です。正当な理由なく3年以内に登記しないと、過料の対象になります。</span></div><div class="risk-card"><div class="big">費用は全額請求</div><b>行政代執行で解体される</b><span>放置が続くと自治体が解体し、その費用は所有者に請求されます。数百万円になることもあります。</span></div><div class="risk-card"><div class="big">賠償責任</div><b>倒壊・火災の責任は所有者に</b><span>屋根や塀が崩れて通行人や隣家に被害が出れば、所有者が賠償の責任を負います。</span></div><div class="risk-card"><div class="big">年々高く</div><b>片付けと解体の費用は上がり、売れる値段は下がる</b><span>傷みが進むほど費用は上がります。売れる家のうちに動く方が、手取りは残ります。</span></div></div>
+<div class="risk-cards"><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19L19 5"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><div class="big">最大6倍</div><b>固定資産税が跳ね上がる</b><span>「管理不全空家」や「特定空家」として勧告を受けると、住宅用地の特例（課税標準が6分の1）が外れ、土地の固定資産税が最大で6倍になることがあります。※実際の税額は評価額と負担調整で決まります。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4l7 7"/><path d="M10 7l7 7"/><path d="M4 20l7-7"/><path d="M3 21h8"/></svg></span><div class="big">10万円以下の過料</div><b>登記を放置すると罰則</b><span>2024年4月から相続登記は義務です。正当な理由なく3年以内に登記しないと、過料の対象になります。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg></span><div class="big">費用は全額請求</div><b>行政代執行で解体される</b><span>放置が続くと自治体が解体し、その費用は所有者に請求されます。数百万円になることもあります。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 4 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z"/></svg></span><div class="big">賠償責任</div><b>倒壊・火災の責任は所有者に</b><span>屋根や塀が崩れて通行人や隣家に被害が出れば、所有者が賠償の責任を負います。</span></div><div class="risk-card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4M16 3v4"/></svg></span><div class="big">年々高く</div><b>片付けと解体の費用は上がり、売れる値段は下がる</b><span>傷みが進むほど費用は上がります。売れる家のうちに動く方が、手取りは残ります。</span></div></div>
 <p class="risk-close">急がせるつもりはありません。ただ、放置の代償は年ごとに大きくなります。順番だけは、先に決めておいてください。</p>
 </section><!--/RISK-->
 
@@ -250,7 +339,7 @@ body.has-sticky{padding-bottom:72px}
 
 <ul class="points"><li><b>家財は、そのままで</b><span>家財ごと引き取る会社があります。「片付けてから」は要りません。</span></li><li><b>登記も話し合いも、後からで</b><span>査定と費用の見積は、相続人の合意がなくても取れます。順番はこちらで整えます。</span></li><li><b>現地に行かなくても</b><span>遠方にお住まいでも進みます。立会いが要る場面だけ、会社から事前に相談があります。</span></li><li><b>他で断られていても</b><span>傷みが激しい家、道が狭い土地、古い長屋。対応できる会社を、その地域で探します。</span></li></ul>
 </div>
-
+<figure class="rel"><svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="お客様と案内所と登録業者の関係図"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#0b5fff"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a94a0"/></marker></defs><g><rect x="10" y="80" width="130" height="64" rx="12" fill="#0b5fff"/><text x="75" y="119" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">あなた</text></g><g><rect x="260" y="56" width="180" height="112" rx="12" fill="#fff" stroke="#0b5fff" stroke-width="2"/><text x="350" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2933">実家じまい案内所（事務局）</text><text x="350" y="124" text-anchor="middle" font-size="12" fill="#52606d">実家のある地域の会社に絞る</text><text x="350" y="146" text-anchor="middle" font-size="12" fill="#52606d">断りも値下げの相談も間に入る</text></g><g transform="translate(580,20)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">買取・仲介の会社</text></g><g transform="translate(580,80)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">片付けの会社</text></g><g transform="translate(580,140)"><rect x="0" y="0" width="170" height="44" rx="8" fill="#fff" stroke="#cbd2d9"/><text x="85" y="28" text-anchor="middle" font-size="14" fill="#1f2933">解体の会社</text></g><path d="M144 96 H254" stroke="#0b5fff" stroke-width="2.5" marker-end="url(#ah)"/><text x="199" y="86" text-anchor="middle" font-size="12" fill="#1f2933">相談を送る（1分）</text><path d="M254 130 H144" stroke="#8a94a0" stroke-width="2.5" marker-end="url(#ag)"/><text x="199" y="152" text-anchor="middle" font-size="12" fill="#52606d">比べて決める</text><path d="M444 96 H574" stroke="#0b5fff" stroke-width="2.5" marker-end="url(#ah)"/><text x="509" y="86" text-anchor="middle" font-size="12" fill="#1f2933">最大3社を手配</text><path d="M574 130 H444" stroke="#8a94a0" stroke-width="2.5" marker-end="url(#ag)"/><text x="509" y="152" text-anchor="middle" font-size="12" fill="#52606d">査定と見積</text><text x="380" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2933">会社からあなたへ、営業の電話は行きません。断るときは、事務局が代わりに伝えます。</text></svg></figure><figure class="ph"><img src="img/illust_house.jpg" alt="実家（イラスト）" width="1344" height="768" srcset="img/illust_house-720.jpg 720w, img/illust_house.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"></figure>
 <div class="rescue"><p class="rescue-t">そうなる前に、無料で相談してみませんか。</p><a class="cta" href="#form">無料で査定と見積を手配する</a><p class="note">紹介は無料・入力1分・断っても費用はかかりません・しつこい営業はしません</p></div>
 </section>
 
@@ -260,14 +349,14 @@ body.has-sticky{padding-bottom:72px}
 
 <section id="reasons" data-sec="reasons">
 <h2>実家じまい案内所でできること</h2>
-<div class="cards"><div class="card"><b>家財が残ったままで査定できる</b><div class="note">片付けなくて大丈夫です。そのまま買い取る会社なら片付け費用がかからないこともあります。買取・仲介・解体の3通りで比べられます。</div></div><div class="card"><b>実家のある地域の会社から、1〜2営業日で連絡</b><div class="note">実家のある市区町村で現地を見られる会社をお渡しします。ご自身が遠くにお住まいでも進められます。</div></div><div class="card"><b>順番と費用の幅を先に見せる</b><div class="note">片付けてから売る、解体してから相談する。順番を間違えると要らない費用を払います。先に順番と費用の幅をお見せします。紹介は無料、断っても費用はかかりません。</div></div></div>
+<div class="cards three"><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span><b>家財が残ったままで査定できる</b><div class="note">片付けなくて大丈夫です。そのまま買い取る会社なら片付け費用がかからないこともあります。買取・仲介・解体の3通りで比べられます。</div></div><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><b>実家のある地域の会社から、1〜2営業日で連絡</b><div class="note">実家のある市区町村で現地を見られる会社をお渡しします。ご自身が遠くにお住まいでも進められます。</div></div><div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="5" cy="6" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="5" cy="18" r="1"/></svg></span><b>順番と費用の幅を先に見せる</b><div class="note">片付けてから売る、解体してから相談する。順番を間違えると要らない費用を払います。先に順番と費用の幅をお見せします。紹介は無料、断っても費用はかかりません。</div></div></div>
 </section>
 
 <section id="money" data-sec="money">
 <h2>お金の話</h2>
 <div class="money-lead"><p>先に費用を知っておくと、損をしません</p><ul><li>片付けてから売ると、買取ならかからなかった片付け費用（数十万円）を先に払うことになります</li><li>解体してから売ると、住宅用地の特例（課税標準が6分の1）が外れて、売れるまで土地の固定資産税の軽減がないまま続きます（1月1日時点で判定）</li><li>傷みが進んでから動くと、片付けも解体も高くなります。売れる家のうちに動く方が手取りは残ります</li></ul></div>
 <div class="cmp"><p class="cmp-t">同じ家でも、頼み方で手取りが変わります</p><p class="cmp-lead">1社に直接頼むと、その会社のやり方の値段しか出ません。案内所は、買取・仲介・解体の3つの出口を、最大3社の見積で並べます。</p><div class="cmp-head"><span></span><span class="c1">1社に直接頼むと</span><span class="c2">案内所で並べると</span></div><div class="cmp-row"><div class="cmp-k">片付け費用</div><p class="cmp-a"><i>1社に直接頼むと</i>「片付けてから」と言われ、先に数十万円を払う</p><p class="cmp-b"><i>案内所で並べると</i>家財ごと買い取る会社も並べます。片付け費用ゼロの案と比べられます</p></div><div class="cmp-row"><div class="cmp-k">解体費</div><p class="cmp-a"><i>1社に直接頼むと</i>「解体しないと売れない」の一言で、100万円〜が先に出ていく</p><p class="cmp-b"><i>案内所で並べると</i>現状のまま買う会社の額と、解体後の手取りを並べてから決められます</p></div><div class="cmp-row"><div class="cmp-k">手数料</div><p class="cmp-a"><i>1社に直接頼むと</i>仲介なら手数料がかかります。上限は売買価格の3%＋6万円＋税。800万円以下の物件は最大33万円（税込）まで認められています</p><p class="cmp-b"><i>案内所で並べると</i>買取案は手数料ゼロ。仲介案と「手取り」で比べられます</p></div><div class="cmp-row"><div class="cmp-k">売値</div><p class="cmp-a"><i>1社に直接頼むと</i>1社の言い値。高いか安いか分からない</p><p class="cmp-b"><i>案内所で並べると</i>最大3社の見積で比較。断っても費用はかかりません</p></div><p class="cmp-close">先に並べてから決める。それが、費用の面で損をしない順番です。</p></div><details><summary>片付けと解体の費用の目安（必要な場合だけ）</summary><div class="cards" style="margin-top:10px"><div class="card"><b>片付け（残置物の処分）</b><div class="range">10万〜80万円</div><div class="note">間取りと物の量で決まる一軒家の目安。庭の物置や離れまであると100万円を超えることも。買取や解体とセットにすると安くなることが多い</div></div><div class="card"><b>解体（必要な場合のみ）</b><div class="range">100万〜200万円</div><div class="note">木造の一戸建ての目安。自治体によっては空き家の解体に補助金があり、着工前の申請が条件です</div></div></div></details>
-
+<h3 class="sub-h">手取りが減りやすい順番</h3><p>この順番で動くと、払わなくてよかった費用を先に払うことになります。</p><ul class="factors"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>片付けてから売る（買取なら不要だった片付け費用）</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h13"/><path d="M5 20v-5h7l2-5h4l1 3"/><path d="M14 15l-3-5"/><circle cx="7" cy="20" r="1.5"/><circle cx="13" cy="20" r="1.5"/><path d="M19 13l2 2-2 2"/></svg></span>解体してから売る（固定資産税の特例が外れる）</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 4 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z"/></svg></span>傷んでから動く（片付けも解体も高くなる）</li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span>1社の言い値で決める（比べる相手がいない）</li></ul><p class="note">先に3つの出口（買取・仲介・解体）を並べてから決めるのが、損をしない順番です。</p><figure class="ph"><img src="img/yashiki.jpg" alt="草が伸びた実家の庭（イメージ）" width="1344" height="768" srcset="img/yashiki-720.jpg 720w, img/yashiki.jpg 1400w" sizes="(max-width: 800px) 100vw, 880px" loading="lazy" decoding="async"><figcaption>傷みが進むほど費用は上がり、売れる値段は下がります（イメージ）</figcaption></figure>
 <p class="note">金額は一般的な目安です。地域と現地の見積で確定します。</p>
 </section>
 
@@ -280,9 +369,9 @@ body.has-sticky{padding-bottom:72px}
 
 <section id="flow" data-sec="flow">
 <h2>流れ（3つ）</h2>
-<ol class="steps"><li><b>フォームで送る</b> 1分で入力。受付の控えがメールで届きます。相続登記がまだでも大丈夫です。</li><li><b>実家のある地域の会社から連絡・査定</b> 1〜2営業日を目安に。家財が残ったままで構いません。立会いが要る場合は会社から事前に相談があります。</li><li><b>比較して決める</b> 買取・仲介・解体のどれで進めるか、見積を見て決めます。納得できなければ断って構いません。費用はかかりません。</li></ol>
+<ol class="stepper" style="--n:3"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M12 8l4 4"/></svg></span><b>フォームで送る</b><span>1分で入力。受付の控えがメールで届きます。相続登記がまだでも大丈夫です。</span></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><b>実家のある地域の会社から連絡・査定</b><span>1〜2営業日を目安に。家財が残ったままで構いません。立会いが要る場合は会社から事前に相談があります。</span></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M4 8h5l-2.5 6z"/><path d="M15 8h5l-2.5 6z"/><path d="M6.5 14a2.5 2.5 0 005 0M17.5 14a2.5 2.5 0 005 0" transform="translate(-2 0)"/></svg></span><b>比較して決める</b><span>買取・仲介・解体のどれで進めるか、見積を見て決めます。納得できなければ断って構いません。費用はかかりません。</span></li></ol>
 <p class="note"></p>
-
+<h3 class="sub-h">決めたあと、引き渡しまでこう進みます</h3><p>査定から引き渡しまで、買取なら1〜2か月、仲介なら3〜6か月が一般的な目安です。</p><ol class="tl" style="--n:6"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><div><b>査定（家財そのまま）</b><span>買取と仲介の両方の額を並べる</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4l7 7"/><path d="M10 7l7 7"/><path d="M4 20l7-7"/><path d="M3 21h8"/></svg></span><div><b>相続登記</b><span>売買の前に名義を相続人へ。2024年4月から義務</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M15 20c0-3 1.5-5 4-5 1.5 0 3 1 3 3v2"/></svg></span><div><b>相続人で決める</b><span>出口と手取りを1枚にして共有</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg></span><div><b>契約</b><span>買取は売買契約、仲介は媒介契約から</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span><div><b>家財・解体の手配</b><span>必要な場合だけ。買取なら家財ごと引き渡せることが多い</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l3 3a2 2 0 003 0l4-4"/><path d="M3 9l4-3 4 2 3-2 4 3"/><path d="M3 9v6l5 5"/><path d="M21 9v6l-5 5"/></svg></span><div><b>引き渡し</b><span>代金の受け取りと鍵の引き渡しで完了</span></div></li></ol><p class="note">期間は一般的な目安です。地域と買い手の状況で変わります。</p>
 </section>
 <div class="cta-inline"><a class="cta" href="#form">無料で査定と見積を手配する</a></div>
 
@@ -307,7 +396,7 @@ body.has-sticky{padding-bottom:72px}
 <input type="hidden" name="gclid" value="">
 <input type="hidden" name="consent_at" value="">
 <div class="hp"><label>会社名<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
-<label>実家の所在地（市区町村まで） <span>必須</span></label><input type="text" name="place" required placeholder="例：福岡県北九州市小倉北区">
+<label>実家のある都道府県 <span>必須</span></label><select name="pref" required><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select><label>市区町村 <span>必須</span></label><input type="text" name="city" required placeholder="例：北九州市小倉北区" autocomplete="address-level2"><input type="hidden" name="place" value="">
 <label>お名前 <span>必須</span></label>
 <input type="text" name="name" required autocomplete="name">
 <label>電話番号 <span>必須・折り返しのご連絡に使います</span></label>
@@ -349,9 +438,9 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
   if (fvf) { fvf.addEventListener('submit', function(e){ e.preventDefault();
     var lead = document.getElementById('lead');
     fvf.querySelectorAll('select').forEach(function(s){ if (!s.value) return; var t = lead.querySelector('[name="' + s.name + '"]'); if (t) t.value = s.value;
-      if (s.name === 'pref') { var p = lead.querySelector('[name="place"]'); if (p && p.value.indexOf(s.value) !== 0) p.value = s.value + (p.value || ''); } });
+      if (s.name === 'pref') { var p = lead.querySelector('input[type="text"][name="place"]'); if (p && p.value.indexOf(s.value) !== 0) p.value = s.value + (p.value || ''); } });
     if (typeof gtag === 'function') gtag('event', 'cta_click', { location: 'fv_form', page_kind: 'lp' });
-    location.hash = '#form'; setTimeout(function(){ var n = lead.querySelector('[name="name"]'); if (n) n.focus({preventScroll:true}); }, 400); }); }
+    location.hash = '#form'; setTimeout(function(){ var n = lead.querySelector('[name="city"]') || lead.querySelector('[name="name"]'); if (n) n.focus({preventScroll:true}); }, 400); }); }
   if (document.body.classList.contains('ui-reveal') && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(es){ es.forEach(function(x){ if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, {threshold: 0.15});
     document.querySelectorAll('.card, ol.steps li, .checks li').forEach(function(el){ io.observe(el); });
@@ -368,6 +457,8 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
     ev.preventDefault(); err.style.display = 'none';
     if (f.company.value) return; // honeypot
     var place = f.querySelector('[name="place"]');
+    var pref = f.querySelector('select[name="pref"]'), city = f.querySelector('[name="city"]');
+    if (pref && city && place) { if (!pref.value || !city.value.trim()) { err.textContent = '都道府県と市区町村をご入力ください。'; err.style.display = 'block'; return; } place.value = pref.value + city.value.trim(); }
     if (!f.name.value.trim() || !f.tel.value.trim() || !f.email.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
     if (!f.consent.checked) { err.textContent = '同意のチェックをお願いします。'; err.style.display = 'block'; return; }
     f.consent_at.value = new Date().toISOString();
