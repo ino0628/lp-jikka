@@ -192,6 +192,7 @@ body.has-sticky{padding-bottom:72px}
 <body data-page="lp" class="ui-shine ui-pulse">
 <script>
 (function(){
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', arguments.callee); return; }
   if (typeof gtag !== 'function') return;
   var page = document.body.getAttribute('data-page') || 'lp';
   var sent = {};
