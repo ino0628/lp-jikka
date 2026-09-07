@@ -267,6 +267,19 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 .fvf select{margin-top:2px;padding:11px 10px;font-size:16px}
 .fvf-btn{width:100%;display:block;margin:12px 0 0;font-size:17px;padding:15px 16px;border:0;cursor:pointer}
 .fvf-note{margin:8px 0 0;text-align:center}
+.fvf-est{background:var(--soft);border-radius:10px;padding:10px 12px 10px;margin:2px 0 2px}
+.fvf-est-t{margin:0;font-size:13px;color:var(--sub)}
+.fvf-est-t b{color:var(--ink)}
+.fvf-est-n{margin:2px 0 6px;font-size:24px;font-weight:800;color:var(--accent);line-height:1.2}
+.fvf-est-b{margin:4px 0 0;font-size:12px;color:var(--sub);line-height:1.55}
+.fvf select.fvf-need{border-color:#d33;box-shadow:0 0 0 2px rgba(221,51,51,.15)}
+.v .checks li.has-a{padding:0}
+.v .checks li.has-a details{background:none;border:0;border-radius:0;padding:0;margin:0}
+.v .checks li.has-a summary{list-style:none;cursor:pointer;font-weight:400;padding:10px 96px 10px 52px;position:relative;min-height:22px}
+.v .checks li.has-a summary::-webkit-details-marker{display:none}
+.v .checks li.has-a summary::after{content:"答えを見る";position:absolute;right:10px;top:10px;font-size:12px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.v .checks li.has-a details[open] summary::after{content:"閉じる"}
+.v .checks li.has-a details p{margin:0;padding:0 12px 12px 52px;color:var(--sub);font-size:14px;line-height:1.65}
 @media (min-width:800px){.v .hero.has-fvf{grid-template-columns:1fr 1fr}.v .hero-text>.note:last-child{margin-bottom:0}}
 /* 関係図（HTML）: スマホは縦に積む・PC は横3列 */
 .rel{margin:14px 0 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px;display:grid;gap:10px;justify-items:center;text-align:center}
@@ -448,7 +461,7 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 
 <div class="sticky" id="sticky"><a class="s-form" href="#form">無料で査定と見積を手配する</a></div>
 
-<section class="guide"><h2>読みもの</h2><ul><li><a href="https://jikka.kurashi-annai.com/guide/souzoku-touki-gimuka/">相続登記をしないとどうなる？ 2024年4月からの義務化・3年の期限・10万円以下の過料</a></li><li><a href="https://jikka.kurashi-annai.com/guide/souzoku-akiya-3000man-kojo/">相続した実家を売ると税金が0円になることも。空き家の3,000万円特別控除の条件（2027年12月31日まで）</a></li><li><a href="https://jikka.kurashi-annai.com/guide/kazai-nokotta-jikka-uru/">家財が残ったままの実家は売れる？ 片付けてから仲介で売る場合と、そのまま買取の手取り比較</a></li><li><a href="https://jikka.kurashi-annai.com/guide/jikka-kaitai-hiyou-hojokin/">実家の解体費用はいくら？ 木造30坪の相場、付帯工事、自治体の補助金（着工前の申請が条件）</a></li><li><a href="https://jikka.kurashi-annai.com/guide/akiya-koteishisanzei-6bai/">空き家の固定資産税が最大6倍になる仕組み。「特定空家」「管理不全空家」の勧告で何が起きるか</a></li></ul><p class="more"><a href="https://jikka.kurashi-annai.com/guide/">すべての読みものを見る</a></p></section>
+<section class="guide"><h2>読みもの</h2><ul><li><a href="https://jikka.kurashi-annai.com/guide/souzoku-touki-gimuka/">相続登記をしないとどうなる？ 2024年4月からの義務化・3年の期限・10万円以下の過料</a></li><li><a href="https://jikka.kurashi-annai.com/guide/souzoku-akiya-3000man-kojo/">相続した実家を売ると税金が0円になることも。空き家の3,000万円特別控除の条件（2027年12月31日まで）</a></li><li><a href="https://jikka.kurashi-annai.com/guide/kazai-nokotta-jikka-uru/">家財が残ったままの実家は売れる？ 片付けてから仲介で売る場合と、そのまま買取の手取り比較</a></li><li><a href="https://jikka.kurashi-annai.com/guide/jikkajimai-junban/">実家じまいは何から手をつける？ 損しない順番と、やってはいけない3つの順番</a></li><li><a href="https://jikka.kurashi-annai.com/guide/jikka-kaitai-hiyou-hojokin/">実家の解体費用はいくら？ 木造30坪の相場、付帯工事、自治体の補助金（着工前の申請が条件）</a></li><li><a href="https://jikka.kurashi-annai.com/guide/akiya-koteishisanzei-6bai/">空き家の固定資産税が最大6倍になる仕組み。「特定空家」「管理不全空家」の勧告で何が起きるか</a></li></ul><p class="more"><a href="https://jikka.kurashi-annai.com/guide/">すべての読みものを見る</a></p></section>
 <footer>
 <p>実家じまい案内所事務局　運営：くらしの案内ドットコム　<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a></p>
 <p class="note">当社は不動産の売買の仲介（宅地建物取引業法上の媒介）は行いません。</p>
@@ -464,7 +477,19 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
     function tick(){ var past = hero.getBoundingClientRect().bottom < 0; var atForm = form.getBoundingClientRect().top < window.innerHeight * 0.6; bar.classList.toggle('show', past && !atForm); }
     window.addEventListener('scroll', tick, {passive:true}); tick(); }
   var fvf = document.getElementById('fvform');
-  if (fvf) { fvf.addEventListener('submit', function(e){ e.preventDefault();
+  if (fvf) {
+    var estEl = document.getElementById('fvest'), estBox = document.getElementById('fvest-box'), fvBtn = fvf.querySelector('.fvf-btn'), E = null;
+    if (estEl && estBox && fvBtn) { try { E = JSON.parse(estEl.textContent); } catch(x) { E = null; } }
+    function fvEst(){ if (!E) return true; var a = fvf.querySelector('select[name="' + E.f1 + '"]'), b = fvf.querySelector('select[name="' + E.f2 + '"]'); if (!a || !b) return true;
+      var key = (a.value && E.matrix[a.value]) ? a.value : E.fallback; var amt = (a.value && b.value && E.matrix[key]) ? E.matrix[key][b.value] : '';
+      if (!amt) { estBox.hidden = true; fvBtn.textContent = E.see; return false; }
+      document.getElementById('fvest-cond').textContent = (E.matrix[a.value] ? a.value : key + 'なら') + '・' + (E.labels[b.value] || b.value);
+      document.getElementById('fvest-amt').textContent = amt; estBox.hidden = false; fvBtn.textContent = E.submit;
+      if (!fvf.getAttribute('data-est')) { fvf.setAttribute('data-est', '1'); if (typeof gtag === 'function') gtag('event', 'fv_estimate', { structure: a.value, size: b.value, page_kind: 'lp' }); try { if (window.clarity) window.clarity('set', 'fv_estimate', a.value + '/' + b.value); } catch(x) {} }
+      return true; }
+    if (E) { fvf.querySelectorAll('select').forEach(function(s){ s.addEventListener('change', function(){ s.classList.remove('fvf-need'); fvEst(); }); }); }
+    fvf.addEventListener('submit', function(e){ e.preventDefault();
+    if (E && !fvEst()) { var miss = Array.prototype.slice.call(fvf.querySelectorAll('select')).filter(function(x){ return !x.value && (x.name === E.f1 || x.name === E.f2); })[0]; if (miss) { miss.classList.add('fvf-need'); miss.focus(); } return; }
     var lead = document.getElementById('lead');
     fvf.querySelectorAll('select').forEach(function(s){ if (!s.value) return; var t = lead.querySelector('[name="' + s.name + '"]'); if (t) t.value = s.value;
       if (s.name === 'pref') { var p = lead.querySelector('input[type="text"][name="place"]'); if (p && p.value.indexOf(s.value) !== 0) p.value = s.value + (p.value || ''); } });
