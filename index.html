@@ -204,13 +204,15 @@ body.has-sticky{padding-bottom:72px}
 
 /* ---- 視覚モード（visual:true） ---- */
 .v .wrap{max-width:880px}
-.v .hero{display:grid;gap:14px 18px;padding:24px 0 16px;grid-template-areas:"h" "t" "m"}
+.v .hero{display:grid;gap:14px 18px;padding:24px 0 16px;grid-template-areas:"h" "i" "t" "m"}
+.v .hero-intro{grid-area:i}
+.v .hero-intro>:last-child{margin-bottom:0}
 .v .hero>h1{grid-area:h;margin:0}
 .v .hero-text{grid-area:t}
 .v .hero-media{grid-area:m;margin:0;border-radius:16px;overflow:hidden;background:var(--soft);aspect-ratio:16/10}
 .v .hero-media img{display:block;width:100%;height:100%;object-fit:cover}
 .v .hero h1{font-size:27px}
-@media (min-width:800px){.v .hero{grid-template-columns:1.15fr 1fr;grid-template-areas:"h h" "t m";align-items:stretch;padding:36px 0 26px}.v .hero-media{aspect-ratio:auto;height:100%;min-height:320px}.v .hero h1{font-size:30px;line-height:1.35;letter-spacing:-.01em}}
+@media (min-width:800px){.v .hero{grid-template-columns:1.15fr 1fr;grid-template-areas:"h h" "i m" "t m";align-items:stretch;padding:36px 0 26px}.v .hero-media{aspect-ratio:auto;height:100%;min-height:320px}.v .hero h1{font-size:30px;line-height:1.35;letter-spacing:-.01em}}
 .v .checks.two{grid-template-columns:1fr}
 @media (min-width:640px){.v .checks.two{grid-template-columns:1fr 1fr}}
 .v .checks li.ico{padding-left:52px}
@@ -300,7 +302,9 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 .v .checks li.has-a details p{margin:0;padding:0 16px 12px 52px;color:var(--sub);font-size:14px;line-height:1.65}
 .v .checks.two{align-items:start}
 @media (min-width:640px){.v .checks.two li.has-a:has(details[open]){grid-column:1 / -1}}
-@media (min-width:800px){.v .hero.has-fvf{grid-template-columns:1fr 1fr}.v .hero-text>.note:last-child{margin-bottom:0}}
+@media (min-width:800px){.v .hero.has-fvf{grid-template-columns:1fr 1fr}.v .hero-text>.note:last-child{margin-bottom:0}
+.v .hero.media-from-form{grid-template-areas:"h h" "i i" "t m"}
+.v .hero.media-from-form .hero-intro{max-width:760px}}
 /* 関係図（HTML）: スマホは縦に積む・PC は横3列 */
 .rel{margin:14px 0 0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px;display:grid;gap:10px;justify-items:center;text-align:center}
 .rel-you{background:var(--accent);color:#fff;font-weight:800;font-size:17px;border-radius:12px;padding:14px 26px;min-width:8em}
@@ -366,9 +370,11 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 <div class="wrap">
 <div class="hero has-fvf">
 <h1>実家、どこから手をつけますか。</h1>
-<div class="hero-text">
+<div class="hero-intro">
 <p>相続した実家を、売却・片付け・解体までまとめて手配します。家財が残ったままで大丈夫です。実家がどこにあっても、ご自身が遠くにお住まいでも。ご連絡は1〜2営業日で。</p>
 <ul class="badges"><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>紹介は無料</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>入力1分</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-6-6-11a6 6 0 0112 0c0 5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span>全国対応</li><li class="ico"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg></span>家財が残ったままで</li></ul>
+</div>
+<div class="hero-text">
 <form class="fvf" id="fvform" novalidate><p class="fvf-t">まず、実家のことだけ教えてください</p><div class="fvf-grid"><label><span class="fvf-step">STEP1</span>建物の状態<select name="property_state"><option value="">選んでください</option><option>家財が残っている</option><option>ほぼ片付いている</option><option>老朽化が進んでいる</option><option>分からない</option></select></label><label><span class="fvf-step">STEP2</span>希望<select name="wish"><option value="">選んでください</option><option>売却したい</option><option>片付けだけ頼みたい</option><option>解体も含めて相談したい</option><option>まだ決めていない</option></select></label><label><span class="fvf-step">STEP3</span>実家のある都道府県<select name="pref"><option value="">選んでください</option><option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option><option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option><option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option><option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option><option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option><option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option><option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option><option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option><option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option><option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option><option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option><option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option></select></label></div><button type="submit" class="cta fvf-btn" data-cta="fv_form">無料で査定と見積を手配する</button><p class="note fvf-note">会社からの営業電話はありません。断るときは、事務局が代わりに伝えます。</p></form>
 <p class="note">紹介は無料です。しつこい営業はしないよう、対応事業者と取り決めています。</p>
 </div>
