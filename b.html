@@ -440,8 +440,8 @@ figure.ph figcaption{font-size:13px;color:var(--sub);padding:8px 12px;background
 <input type="text" name="name" required autocomplete="name">
 <label>電話番号 <span>必須・折り返しのご連絡に使います</span></label>
 <input type="tel" name="tel" required autocomplete="tel" inputmode="tel">
-<label>メールアドレス <span>必須・受付の控えをお送りします</span></label>
-<input type="email" name="email" required autocomplete="email">
+<label>メールアドレス <span>任意・受付の控えをお送りします</span></label>
+<input type="email" name="email" autocomplete="email">
 </div>
 <div class="fs"><div class="fs-h"><i>3</i>実家のこと（任意・分かる範囲で）</div><label>建物の状態 <span>任意</span></label><select name="property_state"><option value="">選んでください</option><option>家財が残っている</option><option>ほぼ片付いている</option><option>老朽化が進んでいる</option><option>分からない</option></select><label>相続登記 <span>任意</span></label><select name="registry"><option value="">選んでください</option><option>済んでいる</option><option>まだ</option><option>分からない</option></select><label>希望 <span>任意</span></label><select name="wish"><option value="">選んでください</option><option>売却したい</option><option>片付けだけ頼みたい</option><option>解体も含めて相談したい</option><option>まだ決めていない</option></select></div>
 <div class="fs"><div class="fs-h"><i>4</i>ご希望（任意）</div>
@@ -513,7 +513,7 @@ window.LP_ENDPOINT = "https://script.google.com/macros/s/AKfycbyX9lsvDTMzTPzCo2D
     var place = f.querySelector('[name="place"]');
     var pref = f.querySelector('select[name="pref"]'), city = f.querySelector('[name="city"]');
     if (pref && city && place) { if (!pref.value || !city.value.trim()) { err.textContent = '都道府県と市区町村をご入力ください。'; err.style.display = 'block'; return; } place.value = pref.value + city.value.trim(); }
-    if (!f.name.value.trim() || !f.tel.value.trim() || !f.email.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
+    if (!f.name.value.trim() || !f.tel.value.trim() || (place && !place.value.trim())) { err.textContent = '必須の項目をご入力ください。'; err.style.display = 'block'; return; }
     if (!f.consent.checked) { err.textContent = '同意のチェックをお願いします。'; err.style.display = 'block'; return; }
     f.consent_at.value = new Date().toISOString();
     var data = {}; new FormData(f).forEach(function(v, k){ data[k] = v; });
